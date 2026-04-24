@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTM-SPORT — Ropa Deportiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ──────────────────────────────────────────────── -->
+<nav>
+  <div class="container">
+    <!--
+      📸 LOGO DEL CLIENTE
+      Reemplazá el <span> de abajo por:
+      <img src="logo.png" alt="FTM-SPORT" class="nav-logo-img">
+      Y eliminá el <span class="nav-logo">
+    -->
+    <span class="nav-logo">FTM<span>SPORT</span></span>
+
+    <div class="nav-right">
+      <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="https://wa.me/5493865740042" target="_blank" class="nav-cta">Consultar ahora</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── CARRITO LATERAL ──────────────────────────────────────── -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3 class="display">Tu pedido</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Todavía no agregaste productos.</p>
+  </div>
+  <div class="cart-footer">
+    <a href="#" class="btn-primary cart-send" id="cartSend" target="_blank">
+      Enviar pedido por WhatsApp →
+    </a>
+    <button class="btn-ghost cart-clear" id="cartClear">Vaciar carrito</button>
+  </div>
+</aside>
+
+<!-- ─── HERO ────────────────────────────────────────────────── -->
+<!--
+  📸 IMAGEN DE FONDO DEL HERO → styles.css, sección .hero
+  Buscá el comentario "IMAGEN DE FONDO DEL HERO" y reemplazá
+  'tu-imagen-fondo.jpg' con la imagen del cliente.
+-->
+<section class="hero">
+  <div class="container">
+    <span class="tag">🏆 Indumentaria, suplementos y accesorios deportivos.</span>
+    <h1 class="display">Todo lo que necesitas.<br>aqui en FTM.</h1>
+    <p>Encontrá todo lo que necesitás para entrenar y lucir bien. Consultá directo por WhatsApp.</p>
+    <div class="hero-btns">
+      <a href="#productos" class="btn-primary">Ver productos →</a>
+      <a href="https://wa.me/5493865740042" target="_blank" class="btn-ghost">Consultar ahora</a>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      scroll
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ──────────────────────────────────────────────── -->
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item"><span>✦</span> Hombre</span>
+    <span class="strip-item"><span>✦</span> Mujer</span>
+    <span class="strip-item"><span>✦</span> Accesorios</span>
+    <span class="strip-item"><span>✦</span> Suplementos</span>
+    <span class="strip-item"><span>✦</span> Combos</span>
+    <span class="strip-item"><span>✦</span> Envíos disponibles</span>
+    <span class="strip-item"><span>✦</span> Hombre</span>
+    <span class="strip-item"><span>✦</span> Mujer</span>
+    <span class="strip-item"><span>✦</span> Accesorios</span>
+    <span class="strip-item"><span>✦</span> Suplementos</span>
+    <span class="strip-item"><span>✦</span> Combos</span>
+    <span class="strip-item"><span>✦</span> Envíos disponibles</span>
+  </div>
+</div>
+
+<!-- ─── STATS ────────────────────────────────────────────────── -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">5</div>
+    <div class="stat-label">Categorías disponibles</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">24hs</div>
+    <div class="stat-label">Atención por WhatsApp</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Calidad garantizada</div>
+  </div>
+</div>
+
+<!-- ─── PRODUCTOS ────────────────────────────────────────────── -->
+<section class="productos" id="productos">
+  <div class="container">
+
+    <div class="section-header">
+      <h2 class="display">Nuestros<br>productos</h2>
+      <p>Seleccioná lo que querés y enviá tu pedido directo por WhatsApp.</p>
+    </div>
+
+    <!-- BARRA DE CATEGORÍAS -->
+    <div class="cat-bar">
+  <button class="cat-btn" data-target="cat-hombre">Hombre</button>
+  <button class="cat-btn" data-target="cat-mujer">Mujer</button>
+  <button class="cat-btn" data-target="cat-accesorios">Accesorios</button>
+  <button class="cat-btn" data-target="cat-suplementos">Suplementos</button>
+  <button class="cat-btn" data-target="cat-combos">Combos</button>
+  <button class="cat-btn" data-target="cat-hombre">Hombre</button>
+    <button class="cat-btn" data-target="cat-mujer">Mujer</button>
+    <button class="cat-btn" data-target="cat-accesorios">Accesorios</button>
+    <button class="cat-btn" data-target="cat-suplementos">Suplementos</button>
+    <button class="cat-btn" data-target="cat-combos">Combos</button>
+</div>
+   <!-- ── MUJER ──────────────────────────────────────────── -->
+    <div class="cat-section" id="cat-mujer">
+      <h3 class="cat-title display">Mujer</h3>
+      <div class="products-grid">
+
+        <!-- 1 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+             <img src="Ropa Mujer/1.jpeg" alt="Remera Oversize FTM">
+      <img src="Ropa Mujer/2.jpeg" alt="Remera Oversize FTM">
+
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>Remera Oversize FTM</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA OVERSIZE FTM - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Ropa Mujer/3.jpeg" alt="CONJUNTO">
+      <img src="Ropa Mujer/4.jpeg" alt="CONJUNTO">
+      <img src="Ropa Mujer/5.jpeg" alt="CONJUNTO">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CONJUNTO I-RUN</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA DE LYCRA SPORT - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Dry-Fit Mujer">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA DRY-FIT</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA DRY-FIT - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Gamu">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA GAMU</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA GAMU - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Boxy Fit">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA BOXY FIT</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA BOXY FIT - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Manga Larga">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA MANGA LARGA</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA MANGA LARGA - MUJER"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 7 — CALZA LARGA (agrupada con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Calza Larga de Lycra Lisa variante 1">
+              <img src="" alt="Calza Larga de Lycra Lisa variante 2">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CALZA LARGA DE LYCRA LISA</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Variante 1</button>
+              <button class="variante" data-index="1">Variante 2</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CALZA LARGA DE LYCRA LISA - Variante 1"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Calza Corta Lisa">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CALZA CORTA LISA</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CALZA CORTA LISA"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 9 — CALZA CORTA SEAMLESS (agrupada con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Calza Corta Seamless Importado">
+              <img src="" alt="Calza Corta Seamless Sin Frunce">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CALZA CORTA SEAMLESS IMPORTADO</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Con frunce</button>
+              <button class="variante" data-index="1">Sin frunce</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CALZA CORTA SEAMLESS IMPORTADO - Con frunce"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Conjunto Deportivo">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CONJUNTO DEPORTIVO (TOP + CALZA CORTA)</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CONJUNTO DEPORTIVO (TOP + CALZA CORTA)"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Top Deportivo Bretel Fino">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>TOP DEPORTIVO BRETEL FINO</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="TOP DEPORTIVO BRETEL FINO"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 12 — TOP REFORZADO (agrupado con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Top Deportivo Reforzado">
+              <img src="" alt="Top Deportivo Reforzado Morley">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>TOP DEPORTIVO REFORZADO</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Clásico</button>
+              <button class="variante" data-index="1">Morley</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="TOP DEPORTIVO REFORZADO - Clásico"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 13 — MUSCULOSA DRY-FIT (agrupada con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Musculosa Dry-Fit variante 1">
+              <img src="" alt="Musculosa Dry-Fit variante 2">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>MUSCULOSA DRY-FIT</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Variante 1</button>
+              <button class="variante" data-index="1">Variante 2</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="MUSCULOSA DRY-FIT - Variante 1"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 14 — CATSUIT (agrupado con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Catsuit Corto Importado">
+              <img src="" alt="Catsuit Largo Importado">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CATSUIT IMPORTADO</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Corto</button>
+              <button class="variante" data-index="1">Largo</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CATSUIT IMPORTADO - Corto"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <button class="ver-mas-btn">Ver más productos ↓</button>
+    </div>
+
+    <!-- ── HOMBRE ──────────────────────────────────────────── -->
+    <div class="cat-section" id="cat-hombre">
+      <h3 class="cat-title display">Hombre</h3>
+      <div class="products-grid">
+
+        <!-- 1 — REMERA I-RUN (agrupada con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Ropa Hombre/1.jpeg" alt="Remera dry-fit FTM Hombre">
+              <img src="Ropa Hombre/2.jpeg" alt="Remera dry-fit FTM Hombre">
+              <img src="Ropa Hombre/3.jpeg" alt="Remera dry-fit FTM Hombre">
+              <img src="Ropa Hombre/4.jpeg" alt="Remera dry-fit FTM Hombre">
+
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA DRY-FIT FTM</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Talle normal</button>
+              <button class="variante" data-index="1">Talle especial</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA I-RUN HOMBRE - Talle normal"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Ropa Hombre/5.jpeg" alt="Remera OVERSIZE FTM Hombre">
+                            <img src="Ropa Hombre/6.jpeg" alt="Remera OVERSIZE FTM Hombre">
+
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA OVERSIZE FTM</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA DRY-FIT - HOMBRE"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Deportiva Hombre">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA DEPORTIVA</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA DEPORTIVA - HOMBRE"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Short Importado Hombre">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>SHORT IMPORTADO</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="SHORT IMPORTADO - HOMBRE"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 — SHORT I-RUN ELASTIZADO (agrupado con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Short I-RUN Elastizado">
+              <img src="" alt="Short I-RUN Elastizado Talle Especial">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>SHORT I-RUN ELASTIZADO</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Talle normal</button>
+              <button class="variante" data-index="1">Talle especial</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="SHORT I-RUN ELASTIZADO - Talle normal"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Short I-RUN con Calza">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>SHORT I-RUN CON CALZA</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="SHORT I-RUN CON CALZA"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <button class="ver-mas-btn">Ver más productos ↓</button>
+    </div>
+
+    <!-- ── ACCESORIOS ─────────────────────────────────────── -->
+    <div class="cat-section" id="cat-accesorios">
+      <h3 class="cat-title display">Accesorios</h3>
+      <div class="products-grid">
+
+        <!-- 1 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Remera Oversize FTM">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>REMERA OVERSIZE FTM</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="REMERA OVERSIZE FTM"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 — CAMISETA TÉRMICA (agrupada con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Camiseta Térmica con Frisa">
+              <img src="" alt="Camiseta Térmica sin Frisa">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CAMISETA TÉRMICA</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Con frisa</button>
+              <button class="variante" data-index="1">Sin frisa</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CAMISETA TÉRMICA - Con frisa"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 — MEDIAS (agrupadas con variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="" alt="Medias 3/4 Calidad Premium FTM">
+              <img src="" alt="Medias Antideslizantes">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>MEDIAS FTM</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">3/4 Premium</button>
+              <button class="variante" data-index="1">Antideslizantes</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="MEDIAS FTM - 3/4 Premium"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <button class="ver-mas-btn">Ver más productos ↓</button>
+    </div>
+
+    <!-- ── SUPLEMENTOS ────────────────────────────────────── -->
+    <div class="cat-section" id="cat-suplementos">
+      <h3 class="cat-title display">Suplementos</h3>
+      <div class="products-grid">
+
+        <!-- 1 — WHEY PROTEIN (3 sabores) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/PROTEINA STAR.jpeg" alt="Whey Protein Chocolate">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.17.18 - copia.jpeg" alt="Whey Protein Vainilla">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.14.41.jpeg" alt="Whey Protein Cookies and Cream">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Top ventas</span>
+          </div>
+          <div class="product-info">
+            <h5>WHEY PROTEIN STAR NUTRITION 2LB</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Chocolate Suizo</button>
+              <button class="variante" data-index="1">Vainilla</button>
+              <button class="variante" data-index="2">Cookies and Cream</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="WHEY PROTEIN STAR NUTRITION 2LB - Chocolate Suizo"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 — MUTANT MASS -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.18.03.jpeg" alt="Mutant Mass Vainilla">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>MUTANT MASS STAR NUTRITION 1,5KG - VAINILLA</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="MUTANT MASS STAR NUTRITION 1,5KG - VAINILLA"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 — HYDROMAX (3 variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.19.08.jpeg" alt="Hydromax Pomelo">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.19.27.jpeg" alt="Hydromax Naranja">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.21.55.jpeg" alt="Hydromax 1.5kg">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>HYDROMAX SPORT DRINK - NUTREMAX</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Pomelo</button>
+              <button class="variante" data-index="1">Naranja</button>
+              <button class="variante" data-index="2">1,5kg</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="HYDROMAX SPORT DRINK NUTREMAX - Pomelo"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 — MAGNESIO (2 variantes) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.23.14.jpeg" alt="Magnesio 500gr">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.23.42.jpeg" alt="Magnesio 60 caps">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>MAGNESIO STAR NUTRITION</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">500gr Neutro</button>
+              <button class="variante" data-index="1">X60 Caps</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="MAGNESIO STAR NUTRITION - 500gr Neutro"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 — PRO SALTS -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-06 at 10.24.14.jpeg" alt="Pro Salts">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>PRO SALTS NUTREMAX X60CAPS</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="PRO SALTS NUTREMAX X60CAPS"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 — CREATINA (2 tamaños) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.15.23.jpeg" alt="Creatina 300gr">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.17.33.jpeg" alt="Creatina 500gr">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CREATINA STAR NUTRITION</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">300gr</button>
+              <button class="variante" data-index="1">500gr</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CREATINA STAR NUTRITION - 300gr"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 7 — BCAA -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.18.08.jpeg" alt="BCAA">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>BCAA STAR NUTRITION - CONSULTAR SABORES</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="BCAA STAR NUTRITION - CONSULTAR SABORES"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 8 — COLÁGENO (2 sabores) -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.18.36.jpeg" alt="Colageno Limon">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.19.04.jpeg" alt="Colageno Naranja">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>COLÁGENO STAR NUTRITION</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Plus Limón</button>
+              <button class="variante" data-index="1">Sport Naranja</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="COLÁGENO STAR NUTRITION - Plus Limón"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 9 — CAFEÍNA -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.19.35.jpeg" alt="Cafeina">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>CAFEÍNA STAR NUTRITION X30 CAPS</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="CAFEÍNA STAR NUTRITION X30 CAPS"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 10 — PANCAKES PROTEICOS -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.20.40.jpeg" alt="Pancakes Proteicos">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>PANCAKES PROTEICOS GRANGER</h5>
+            <div class="variantes">
+              <button class="variante active" data-index="0">Vainilla</button>
+              <button class="variante" data-index="1">Chocolate</button>
+            </div>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="PANCAKES PROTEICOS GRANGER - Vainilla"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 11 — PREENTRENO V8 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.21.15.jpeg" alt="Preentreno V8">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>PREENTRENO V8 STAR NUTRITION</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="PREENTRENO V8 STAR NUTRITION"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- 12 — OMEGA 3 -->
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="Suplementos/WhatsApp Image 2026-03-09 at 18.21.52.jpeg" alt="Omega 3">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <h5>OMEGA 3 FISH OIL STAR NUTRITION</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio de lista</div>
+            <button class="product-cta add-to-cart"
+              data-name="OMEGA 3 FISH OIL STAR NUTRITION"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <button class="ver-mas-btn">Ver más productos ↓</button>
+    </div>
+
+    <!-- ── COMBOS ──────────────────────────────────────────── -->
+    <div class="cat-section" id="cat-combos">
+      <h3 class="cat-title display">Combos</h3>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="imagen-combo-1.jpg" alt="Combo 1">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Oferta</span>
+          </div>
+          <div class="product-info">
+            <h5>Nombre del combo</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio especial combo</div>
+            <button class="product-cta add-to-cart"
+              data-name="Nombre del combo"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="imagen-combo-2.jpg" alt="Combo 2">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Oferta</span>
+          </div>
+          <div class="product-info">
+            <h5>Nombre del combo</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio especial combo</div>
+            <button class="product-cta add-to-cart"
+              data-name="Nombre del combo"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img carousel">
+            <div class="carousel-track">
+              <img src="imagen-combo-3.jpg" alt="Combo 3">
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+            </div>
+            <span class="product-badge">Oferta</span>
+          </div>
+          <div class="product-info">
+            <h5>Nombre del combo</h5>
+            <div class="price">$00.000</div>
+            <div class="price-sub">Precio especial combo</div>
+            <button class="product-cta add-to-cart"
+              data-name="Nombre del combo"
+              data-price="00.000">
+              + Agregar al pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <button class="ver-mas-btn">Ver más productos ↓</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── BENEFICIOS ───────────────────────────────────────────── -->
+<section class="beneficios">
+  <div class="container">
+    <h2 class="display">¿Por qué <em>elegirnos?</em></h2>
+    <div class="bene-grid">
+      <div class="bene-item">
+        <span class="bene-icon">⚡</span>
+        <h3>Calidad garantizada</h3>
+        <p>Productos seleccionados para que entrenés y te veas bien. Calidad en cada detalle.</p>
+      </div>
+      <div class="bene-item">
+        <span class="bene-icon">📱</span>
+        <h3>Pedido fácil</h3>
+        <p>Agregá lo que querés y enviá tu pedido directo por WhatsApp. Sin vueltas.</p>
+      </div>
+      <div class="bene-item">
+        <span class="bene-icon">💬</span>
+        <h3>Atención personalizada</h3>
+        <p>Te asesoramos para que elijas lo mejor según tu entrenamiento y tu estilo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA FINAL ─────────────────────────────────────────────── -->
+<section class="cta-section">
+  <span class="tag">¿Listo para empezar?</span>
+  <h2 class="display">Tu ropa.<br>Tu ritmo.<br><em>Ya.</em></h2>
+  <p>Consultanos por WhatsApp y te ayudamos a elegir.</p>
+  <a href="https://wa.me/5493865740042" target="_blank" class="btn-primary" style="font-size:16px; padding:18px 44px;">
+    Hablemos por WhatsApp →
+  </a>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <span class="footer-logo">FTM<span>SPORT</span></span>
+    <p>Ropa deportiva · 2025</p>
+    <a href="https://www.instagram.com/ftm.e.d.m" target="_blank" class="footer-ig">
+      📷 @ftm.e.d.m
+    </a>
+  </div>
+</footer>
+
+<!-- ─── BOTÓN FLOTANTE WHATSAPP ──────────────────────────────── -->
+<a href="https://wa.me/5493865740042" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
