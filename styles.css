@@ -272,8 +272,9 @@ nav .container {
   background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
   pointer-events: none;
 }
-.hero .tag { margin-bottom: 32px; animation: fadeUp 0.7s 0.1s ease both; }
+.hero .tag { margin-bottom: 32px; animation: fadeUp 0.7s 0.1s ease both; color: white;}
 .hero h1 {
+  color: white;
   font-size: clamp(64px, 11vw, 128px);
   max-width: 900px; margin: 0 auto 12px;
   animation: fadeUp 0.7s 0.2s ease both;
