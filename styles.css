@@ -92,7 +92,7 @@ nav .container {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 22px;
   letter-spacing: 0.12em;
-  color: var(--white);
+  color: white;
 }
 .nav-logo span { color: var(--muted); }
 .nav-logo-img { height: 38px; width: auto; object-fit: contain; }
@@ -302,7 +302,7 @@ nav .container {
   box-shadow: 0 8px 30px rgba(255,255,255,0.12);
 }
 .btn-ghost {
-  background: transparent; color: var(--white);
+  background: transparent; color: white;
   font-size: 14px; font-weight: 500;
   padding: 15px 32px; border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -712,4 +712,50 @@ footer p { font-size: 13px; color: var(--muted); }
 .variante:hover {
   border-color: var(--muted);
   color: var(--white);
+}
+
+/* Contenedor de etiquetas (Talle/Color) */
+.label-detalle {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 10px 0 5px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Contenedor de los círculos de color */
+.color-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+/* Estilo base del círculo */
+.color-dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+/* Colores específicos */
+.color-dot.negra { background-color: #000000; }
+.color-dot.verde { background-color: #28a745; }
+.color-dot.celeste { background-color: #00adef; }
+.color-dot.gris { background-color: grey; }
+
+
+/* Efecto cuando está seleccionado */
+.color-dot.active {
+  border-color: #ff4500; /* Color naranja de FTM para resaltar */
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.color-dot:hover {
+  transform: scale(1.1);
 }

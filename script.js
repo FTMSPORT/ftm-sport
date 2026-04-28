@@ -289,3 +289,25 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 
 // ── Init ─────────────────────────────────────────────────────
 renderCart();
+
+
+document.querySelectorAll('.product-card').forEach(card => {
+  const colores = card.querySelectorAll('.color-dot');
+  const addBtn = card.querySelector('.add-to-cart');
+  const baseName = card.querySelector('h5')?.textContent.trim();
+
+  colores.forEach(dot => {
+    dot.addEventListener('click', () => {
+      // Cambiar clase activa entre los círculos
+      colores.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+
+      // Obtener talle y color para actualizar el botón
+      const talle = card.querySelector('.variante.active')?.textContent || '';
+      const color = dot.getAttribute('data-color');
+
+      // Actualizar el data-name del botón de compra
+      addBtn.setAttribute('data-name', `${baseName} - Talle ${talle} - ${color}`);
+    });
+  });
+});
